@@ -2,7 +2,7 @@
   "name": "datamining",
   "version": "1.0.0",
   "description": "anone anone~",
-  "main": "index.js",
+  "main": "apriori.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,13 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "excel-to-json": "^1.0.0",
     "frequent-itemset": "^1.0.5",
-    "fs": "0.0.1-security",
-    "i": "^0.3.6",
-    "nodemon": "^1.18.3",
-    "npm": "^6.2.0",
-    "papaparse": "^4.5.0",
     "xlsx2json": "^1.0.0"
   }
 }
