@@ -1,31 +1,36 @@
 const fi = require('frequent-itemset');
 const xlsx2json = require('xlsx2json');
 
-var dataExcel = xlsx2json('doc/data.xlsx',{
-    dataStartingRow: 2,
+/**
+ * configuration
+ * ubah @param {filename} nama_file
+ */
+const PATH = 'doc/'
+var filename = 'Book1.xlsx'
+
+const file = PATH+filename
+
+var dataExcel = xlsx2json(file,{
+    dataStartingRow: 1,
   })
   .then(data => {
     var jsonData = data[0]
-    
     let mapJson = jsonData.map(item => {
       let arr = []
       for(var data in item){
-        if(item[data]!=''){
-          arr.push(parseInt(item[data]))
+        if(item[data]!='' && item[data] != null){
+          arr.push(item[data])
         }
-      }
+      }     
       return arr
     })
-    // console.log(mapJson);
-    // return mapJson
     var itemset = fi(mapJson,0.5,true)
     return itemset
 });
 
-console.log("generating data item set :\n")
+console.log("generating frequent itemset...")
 
 setTimeout(function(){
-  console.log("frequent-itemset : ")
+  console.log("frequent itemset : ")
   console.log(dataExcel)
-  // console.log("ctrl+c to stop update")
 }, 5000);
