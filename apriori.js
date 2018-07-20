@@ -9,9 +9,11 @@ const PATH = 'doc/'
 var filename = 'Book1.xlsx'
 
 const file = PATH+filename
+const min_support = 0.5 // -> 50%
 
 var dataExcel = xlsx2json(file,{
     dataStartingRow: 1,
+    dataStartingCol: 2
   })
   .then(data => {
     var jsonData = data[0]
@@ -24,7 +26,11 @@ var dataExcel = xlsx2json(file,{
       }     
       return arr
     })
-    var itemset = fi(mapJson,0.5,true)
+    /**
+     * @param {mapjson} array_of_object from json
+     * @param {min_support} minimal_support defined
+     */
+    var itemset = fi(mapJson,min_support,true)
     return itemset
 });
 

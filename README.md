@@ -23,3 +23,7 @@ node apriori.js
 ```
 
 credit : `Kankuu`
+
+node package used : 
+- [frequent-itemset](https://www.npmjs.com/package/frequent-itemset)
+- [xlsx2json](https://www.npmjs.com/package/xlsx2json)

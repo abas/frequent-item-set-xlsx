@@ -4,7 +4,7 @@
   "description": "anone anone~",
   "main": "apriori.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "apriori" : "node apriori.js"
   },
   "keywords": [],
   "author": "",
