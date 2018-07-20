@@ -6,8 +6,13 @@
   "scripts": {
     "apriori" : "node apriori.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "data mining",
+    "apriori",
+    "frequent itemset",
+    "itemset"
+  ],
+  "author": "Abas",
   "license": "ISC",
   "dependencies": {
     "frequent-itemset": "^1.0.5",
